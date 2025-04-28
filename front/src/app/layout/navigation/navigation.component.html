@@ -1,0 +1,21 @@
+<div class="header">
+  <div class="container">
+    <a [routerLink]="['/main']" class="logo">
+      <img src="../../../assets/img/icons/logo.svg" alt="logo">
+    </a>
+    <div *ngIf="isLoggedIn" class="nav-btns d-flex flex-row">
+      <div class="p-2"> <a [routerLink]="['/search']"><img class="nav-icon" src="../../../assets/img/icons/header1.svg" alt="header"></a></div>
+      <div class="p-2"> <a  [routerLink]="['/notifications']"><img class="nav-icon" src="../../../assets/img/icons/header2.svg" alt="header"></a></div>
+      <div class="p-2"><a [routerLink]="['/profile']"><img class="nav-icon" src="../../../assets/img/icons/header4.svg" alt="header"></a></div>
+      <div class="p-2"> <a  (click) = "logout()"><img class="nav-icon" src="../../../assets/img/icons/header5.svg" alt="header"></a></div>
+      <div class="p-2">
+        <label class="theme-switch">
+          <input type="checkbox" (change)="toggleTheme()" [checked]="isDarkMode">
+          <span class="slider round"></span>
+        </label>
+      </div>
+      <span class="spacer"></span>
+    </div>
+  </div>
+
+</div>

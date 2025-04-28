@@ -1,0 +1,56 @@
+img{
+  width: 10%;
+}
+ul{
+  list-style: none;
+}
+
+
+ul{
+  background-color: #f6e1d0;
+  border-radius: 20px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.profile-btn{
+  border: none;
+  background-color: #E5C8B2;
+  color: #fff;
+  border-radius: 10px;
+  margin-left: 20px;
+  font-size: 20px;
+  font-family: 'Montserrat';
+  padding: 12px 30px;
+}
+
+.notification-card {
+  background: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 15px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.notification-text p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.notification-action img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.notification-action button {
+  font-size: 14px;
+}

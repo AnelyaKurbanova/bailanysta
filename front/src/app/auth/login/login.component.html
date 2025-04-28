@@ -1,0 +1,30 @@
+<div class="login-page">
+    <form [formGroup]="loginForm">
+      <img src="../../../assets/img/cat.png" alt="cat" class="cat">
+      <div>
+        <div class="justify-content-center">
+          <div></div>
+          <mat-form-field appearance="outline">
+            <mat-label>User name</mat-label>
+            <input matInput
+                   formControlName="username">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field appearance="outline">
+            <mat-label>Password</mat-label>
+            <input matInput type="password"
+                   formControlName="password">
+          </mat-form-field>
+        </div>
+
+        <div id="controls" class="row">
+          <button [disabled]="loginForm.invalid" (click)="submit()" mat-flat-button color="green">
+            Login
+          </button>
+
+          <a class="reg-btn" routerLink="/register">Register</a>
+        </div>
+      </div>
+    </form>
+  </div>
