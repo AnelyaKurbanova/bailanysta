@@ -5,7 +5,7 @@ import {User} from "../models/User";
 import {Friend, FriendStatus} from "../models/Friend";
 import {TokenStorageService} from "./token-storage.service";
 
-const USER_API = 'http://127.0.0.1:8000/api/users/';
+const USER_API = 'https://bailanysta-production.up.railway.app/api/users/';
 
 @Injectable({
   providedIn: 'root'

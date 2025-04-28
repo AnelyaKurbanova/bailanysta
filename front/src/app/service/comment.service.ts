@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
 
-const COMMENT_API = 'http://127.0.0.1:8000/api/comments/';
+const COMMENT_API = 'https://bailanysta-production.up.railway.app/api/comments/';
 
 @Injectable({
   providedIn: 'root'

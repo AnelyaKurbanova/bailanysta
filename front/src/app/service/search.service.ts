@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 
-const SEARCH_API = 'http://localhost:8000/api/search/'
+const SEARCH_API = 'https://bailanysta-production.up.railway.app/api/search/'
 
 @Injectable({
   providedIn: 'root'

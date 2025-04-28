@@ -4,7 +4,7 @@ import {Observable} from "rxjs";
 import {HttpClient} from "@angular/common/http";
 import {Notification} from "../models/Notification";
 
-const NOTIF_URL = 'http://localhost:8000/api/notifications/'
+const NOTIF_URL = 'https://bailanysta-production.up.railway.app/api/notifications/'
 
 @Injectable({
   providedIn: 'root'

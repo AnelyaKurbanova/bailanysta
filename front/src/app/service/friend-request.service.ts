@@ -2,7 +2,7 @@ import {Injectable} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 
-const FriendRequest_URL = 'http://localhost:8000/api/friend-requests/';
+const FriendRequest_URL = 'https://bailanysta-production.up.railway.app/api/friend-requests/';
 
 @Injectable({
   providedIn: 'root'

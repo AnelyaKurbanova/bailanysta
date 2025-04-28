@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GeminiService {
-  private apiUrl = 'http://localhost:8000/api/posts/generate_ai_post/';
+  private apiUrl = 'https://bailanysta-production.up.railway.app/api/posts/generate_ai_post/';
 
   constructor(private http: HttpClient) {}
 

@@ -14,7 +14,7 @@ export class AuthService {
 
   logIn(user: UserCredentials): Observable<any> {
     return this.http.post(
-      'http://127.0.0.1:8000/api-user-login/', {
+      'https://bailanysta-production.up.railway.app/api-user-login/', {
         username: user.username,
         password: user.password
       }
@@ -22,6 +22,6 @@ export class AuthService {
   }
 
   register(user: any): Observable<any> {
-    return this.http.post<any>('http://localhost:8000/sign-up/', user);
+    return this.http.post<any>('https://bailanysta-production.up.railway.app/sign-up/', user);
   }
 }

@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Post} from '../models/Post';
 import {Observable} from 'rxjs';
 
-const POST_API = 'http://localhost:8000/api/posts';
+const POST_API = 'https://bailanysta-production.up.railway.app/api/posts';
 
 @Injectable({
   providedIn: 'root'
@@ -28,27 +28,27 @@ export class PostService {
   }
 
   deletePost(post: Post): Observable<any> {
-    return this.http.delete(`http://localhost:8000/api/posts/${post.id}`, post);
+    return this.http.delete(`https://bailanysta-production.up.railway.app/api/posts/${post.id}`, post);
   }
 
   likePost(post: Post): Observable<any> {
-    return this.http.post(`http://localhost:8000/api/posts/${post.id}/like/`, post);
+    return this.http.post(`https://bailanysta-production.up.railway.app/api/posts/${post.id}/like/`, post);
   }
 
   addToCommentToPost(post: Post, message: string): Observable<any> {
-    return this.http.post(`http://127.0.0.1:8000/api/posts/${post.id}/comments/`, {
+    return this.http.post(`https://bailanysta-production.up.railway.app/api/posts/${post.id}/comments/`, {
       post: post.id,
       body: message
     });
   }
 
   getCommentsToPost(postId: number | undefined): Observable<any> {
-    return this.http.get(`http://127.0.0.1:8000/api/posts/${postId}/comments/`);
+    return this.http.get(`https://bailanysta-production.up.railway.app/api/posts/${postId}/comments/`);
   }
   updatePost(post:Post, file:File, postId:number): Observable<any>{
     const formData = new FormData();
     formData.append('body', post.body);
     formData.append('image', file, file.name);
-    return this.http.put(`http://localhost:8000/api/posts/${postId}`, formData);
+    return this.http.put(`https://bailanysta-production.up.railway.app/api/posts/${postId}`, formData);
   }
 }
