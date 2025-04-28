@@ -67,7 +67,10 @@ export class TokenStorageService {
   }
 
   logOut(): void {
-    window.localStorage.clear();
-    window.location.reload();
+    if (typeof window !== 'undefined' && window.localStorage) {
+      window.localStorage.clear();
+      window.location.reload();
+    }
+
   }
 }

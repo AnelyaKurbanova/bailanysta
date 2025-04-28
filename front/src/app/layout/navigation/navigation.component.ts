@@ -34,12 +34,14 @@ export class NavigationComponent implements OnInit {
         });
     }
 
-    
-    const savedTheme = localStorage.getItem('theme');
-    if (savedTheme === 'dark-theme') {
-      document.body.classList.add('dark-theme');
-      this.isDarkMode = true;
+    if (typeof window !== 'undefined') {
+      const savedTheme = localStorage.getItem('theme');
+      if (savedTheme === 'dark-theme') {
+        document.body.classList.add('dark-theme');
+        this.isDarkMode = true;
+      }
     }
+
   }
 
   logout() {
@@ -48,15 +50,18 @@ export class NavigationComponent implements OnInit {
   }
 
   toggleTheme(): void {
-    if (document.body.classList.contains('dark-theme')) {
-      document.body.classList.remove('dark-theme');
-      localStorage.setItem('theme', '');
-      this.isDarkMode = false;
-    } else {
-      document.body.classList.add('dark-theme');
-      localStorage.setItem('theme', 'dark-theme');
-      this.isDarkMode = true;
+    if (typeof window !== 'undefined') {
+      if (document.body.classList.contains('dark-theme')) {
+        document.body.classList.remove('dark-theme');
+        localStorage.setItem('theme', '');
+        this.isDarkMode = false;
+      } else {
+        document.body.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark-theme');
+        this.isDarkMode = true;
+      }
     }
+
   }
 
 }
